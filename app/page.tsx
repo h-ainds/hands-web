@@ -67,7 +67,7 @@ export default function Home() {
         </p>
         <Link
   href="/app"
-  className="mt-8 px-4 py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+  className="mt-8 px-4 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
 >
   <span className="relative">Start now</span>
   <span className="relative top-[1px] ms-1 flex items-center">
