@@ -59,18 +59,21 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="min-h-[calc(95vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center">
-        <h1 className="text-[3rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-          Your kitchen co-pilot.
-        </h1>
+      <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
+       Your kitchen
+       <br className="block lg:hidden" />
+       <span className="hidden lg:inline">&nbsp;</span>
+       co-pilot.
+      </h1>
         <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-semibold max-w-2xl leading-7 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
           Introducing Hands, your intelligent, personal cooking assistant.
         </p>
         <Link
   href="/app"
-  className="mt-8 px-4 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+  className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
 >
   <span className="relative">Start now</span>
-  <span className="relative top-[1px] ms-1 flex items-center">
+  <span className="relative top-[1.5px] ms-1 flex items-center">
     <ChevronRight size={16} />
   </span>
 </Link>
@@ -80,11 +83,8 @@ export default function Home() {
       <section className="w-full -mt-8 sm:mt-0 pt-0 sm:pt-3 pb-24 sm:pb-28">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-[2.25rem] sm:text-[3.25rem] font-semibold font-['Halyard_Display'] text-white leading-[1.1]">
-              Hands helps you organize recipes, get inspiration and shop easier than ever.
-              <span className="block mt-4">
-                Hands is the best way to cook with AI.
-              </span>
+            <h2 className="text-[2.25rem] sm:text-[3.25rem] font-semibold font-['Halyard_Display'] text-black leading-[1.1]">
+            Like having your own personal chef.
             </h2>
           </div>
         </div>
