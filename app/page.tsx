@@ -93,22 +93,22 @@ export default function Home() {
   <div className="container mx-auto px-4">
     <div className="max-w-7xl mx-auto">
       {/* Rounded container with shadow and responsive padding */}
-      <div className="bg-white rounded-3xl shadow-md px-6 py-8 sm:px-[5.625rem] sm:py-12">
+      <div className="bg-hands-calcium rounded-3xl shadow-custom px-6 py-8 sm:px-[5.625rem] sm:py-12">
         <div className="text-center">
           <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-black leading-[1.1]">
             Like having your own personal chef.
           </h2>
           {/* Subtext */}
-          <div className="mt-6 text-lg sm:text-xl font-halyard font-medium text-black/30 leading-6">
-            <p className="text-black">
-              It answers everyday questions like
-              {/* Add a responsive line break */}
-              <br className="block sm:hidden" />
-              <span className="text-hands-green transition-all duration-500 sm:ml-1">
-                <AnimatedQuestions />
-              </span>
-            </p>
-          </div>
+          <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
+  <p className="text-black">
+    It answers everyday questions like
+    <br /> {/* Line break will now appear on all screen sizes */}
+    <span className="text-hands-green transition-all duration-500">
+      <AnimatedQuestions />
+    </span>
+  </p>
+</div>
+
         </div>
       </div>
     </div>
