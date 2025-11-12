@@ -1,55 +1,64 @@
-'use client'
-import Link from "next/link"
-import { useEffect } from "react"
-import { ArrowUpRight, ChevronRight } from "lucide-react"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { ChevronRight, ArrowUpRight } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { AnimatedQuestions } from "@/components/AnimatedQuestions";
+
 
 export default function Home() {
+  const [index, setIndex] = useState(0);
+
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const visibleEntries = entries.filter(entry => entry.isIntersecting);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+        if (visibleEntries.length > 0) {
+          const viewportCenter = window.innerHeight / 2;
+          const entryDistances = visibleEntries.map((entry) => {
+            const rect = entry.boundingClientRect;
+            const entryCenter = (rect.top + rect.bottom) / 2;
+            const distance = Math.abs(entryCenter - viewportCenter);
+            return { entry, distance };
+          });
 
-      if (visibleEntries.length > 0) {
-        const viewportCenter = window.innerHeight / 2;
+          entryDistances.sort((a, b) => a.distance - b.distance);
+          const mostCenteredEntry = entryDistances[0].entry;
 
-        const entryDistances = visibleEntries.map(entry => {
-          const rect = entry.boundingClientRect;
-          const entryCenter = (rect.top + rect.bottom) / 2;
-          const distance = Math.abs(entryCenter - viewportCenter);
-          return { entry, distance };
-        });
+          document.querySelectorAll(".group img").forEach((img) => {
+            img.classList.remove("opacity-100");
+          });
 
-        entryDistances.sort((a, b) => a.distance - b.distance);
-        const mostCenteredEntry = entryDistances[0].entry;
+          const isMobile = window.innerWidth < 640;
+          const mostCenteredContainer = mostCenteredEntry.target;
+          let imageToShow;
 
-        document.querySelectorAll('.group img').forEach(img => {
-          img.classList.remove('opacity-100');
-        });
+          if (isMobile) {
+            imageToShow =
+              mostCenteredContainer.querySelector(
+                "img:not(.hidden):not(.sm\\:block)"
+              ) || mostCenteredContainer.querySelector("img:first-child");
+          } else {
+            imageToShow =
+              mostCenteredContainer.querySelector("img:not(.sm\\:hidden)") ||
+              mostCenteredContainer.querySelector("img:last-child");
+          }
 
-        const isMobile = window.innerWidth < 640;
-        const mostCenteredContainer = mostCenteredEntry.target;
-
-        let imageToShow;
-        if (isMobile) {
-          imageToShow = mostCenteredContainer.querySelector('img:not(.hidden):not(.sm\\:block)') ||
-            mostCenteredContainer.querySelector('img:first-child');
-        } else {
-          imageToShow = mostCenteredContainer.querySelector('img:not(.sm\\:hidden)') ||
-            mostCenteredContainer.querySelector('img:last-child');
+          if (imageToShow) {
+            imageToShow.classList.add("opacity-100");
+          }
         }
+      },
+      { threshold: 0.9 }
+    );
 
-        if (imageToShow) {
-          imageToShow.classList.add('opacity-100');
-        }
-      }
-    }, { threshold: 0.9 });
-
-    const containers = document.querySelectorAll('.group');
-    containers.forEach(container => observer.observe(container));
+    const containers = document.querySelectorAll(".group");
+    containers.forEach((container) => observer.observe(container));
 
     return () => {
-      containers.forEach(container => observer.unobserve(container));
+      containers.forEach((container) => observer.unobserve(container));
     };
   }, []);
 
@@ -58,37 +67,53 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="min-h-[calc(95vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center">
-      <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-       Your kitchen
-       <br className="block lg:hidden" />
-       <span className="hidden lg:inline">&nbsp;</span>
-       co-pilot.
-      </h1>
+      <div className="min-h-[calc(83vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center">
+        <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
+          Your kitchen
+          <br className="block lg:hidden" />
+          <span className="hidden lg:inline">&nbsp;</span>
+          co-pilot.
+        </h1>
         <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-semibold max-w-2xl leading-7 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
           Introducing Hands, your intelligent, personal cooking assistant.
         </p>
         <Link
-  href="/app"
-  className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
->
-  <span className="relative">Start now</span>
-  <span className="relative top-[1.5px] ms-1 flex items-center">
-    <ChevronRight size={16} />
-  </span>
-</Link>
+          href="/app"
+          className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+        >
+          <span className="relative">Start now</span>
+          <span className="relative top-[1.5px] ms-1 flex items-center">
+            <ChevronRight size={16} />
+          </span>
+        </Link>
       </div>
 
-      {/* Description Section */}
-      <section className="w-full -mt-8 sm:mt-0 pt-0 sm:pt-3 pb-24 sm:pb-28">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-[2.25rem] sm:text-[3.25rem] font-semibold font-['Halyard_Display'] text-black leading-[1.1]">
+{/* Description Section */}
+<section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
+  <div className="container mx-auto px-4">
+    <div className="max-w-7xl mx-auto">
+      {/* Rounded container with shadow and responsive padding */}
+      <div className="bg-white rounded-3xl shadow-md px-6 py-8 sm:px-[5.625rem] sm:py-12">
+        <div className="text-center">
+          <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-black leading-[1.1]">
             Like having your own personal chef.
-            </h2>
+          </h2>
+          {/* Subtext */}
+          <div className="mt-6 text-lg sm:text-xl font-halyard font-medium text-black/30 leading-6">
+            <p className="text-black">
+              It answers everyday questions like
+              {/* Add a responsive line break */}
+              <br className="block sm:hidden" />
+              <span className="text-hands-green transition-all duration-500 sm:ml-1">
+                <AnimatedQuestions />
+              </span>
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Full Width Image Sections */}
       <section className="w-full">

@@ -18,19 +18,25 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-gradient': "url('/Images/bg-gradient-hero.jpg')",
+        "hero-gradient": "url('/Images/bg-gradient-hero.jpg')",
       },
       backgroundSize: {
-        'hero-size': '100% 100%',
+        "hero-size": "100% 100%",
       },
       backgroundPosition: {
-        'hero-position': 'center',
+        "hero-position": "center",
       },
       screens: {
         xs: "440px",
       },
       fontFamily: {
-        helvetica: ["Helvetica Neue Pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        helvetica: [
+          "Helvetica Neue Pro",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
         halyard: ["Halyard Display", "sans-serif"],
       },
       fontWeight: {
@@ -40,12 +46,15 @@ module.exports = {
         semibold: "600",
         bold: "700",
       },
+
+      // 🟩 Integrated Hands Palette
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -74,16 +83,43 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
         gradient: {
           start: "#000000",
           end: "#FFFFFF",
         },
+
+        // 🎨 Hands Brand Colors
+        hands: {
+          white: "#FFFFFF",
+          black: "#000000",
+          strawberry: "#FE303F",
+
+          spring: {
+            dark: "#6ED308", // Spring Green Dark
+            light: "#A5E765", // Spring Green Light (gradient variant)
+          },
+
+          green: "#6CD401", // Primary (Log In, Save..)
+          lime: "#98E14D",  // 70% variant of green
+          honeydew: "#F0FBE5", // 10% variant of green
+
+          // Greys
+          calcium: "#F7F7F7",   // Input field / Secondary button
+          silver: "#DFE0E1",    // Usage
+          magnesium: "#B2B2B2", // Icons
+          grey: "#9F9F9F",      // Secondary text / Placeholder
+          iron: "#58575C",      // Unselected nav text
+          graphite: "#343434",  // Dark text
+        },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -94,6 +130,7 @@ module.exports = {
           to: { height: 0 },
         },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -101,4 +138,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
