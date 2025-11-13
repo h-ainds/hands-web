@@ -14,47 +14,26 @@ export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleEntries = entries.filter((entry) => entry.isIntersecting);
-        if (visibleEntries.length > 0) {
-          const viewportCenter = window.innerHeight / 2;
-          const entryDistances = visibleEntries.map((entry) => {
-            const rect = entry.boundingClientRect;
-            const entryCenter = (rect.top + rect.bottom) / 2;
-            const distance = Math.abs(entryCenter - viewportCenter);
-            return { entry, distance };
-          });
-
-          entryDistances.sort((a, b) => a.distance - b.distance);
-          const mostCenteredEntry = entryDistances[0].entry;
-
-          document.querySelectorAll(".group img").forEach((img) => {
-            img.classList.remove("opacity-100");
-          });
-
-          const isMobile = window.innerWidth < 640;
-          const mostCenteredContainer = mostCenteredEntry.target;
-          let imageToShow;
-
-          if (isMobile) {
-            imageToShow =
-              mostCenteredContainer.querySelector(
-                "img:not(.hidden):not(.sm\\:block)"
-              ) || mostCenteredContainer.querySelector("img:first-child");
+        entries.forEach((entry) => {
+          const textContent = entry.target.querySelector('.animate-text-content');
+          
+          if (entry.isIntersecting) {
+            // Add animation class when in viewport
+            textContent?.classList.add('opacity-100', 'translate-y-0');
+            textContent?.classList.remove('opacity-0', 'translate-y-8');
           } else {
-            imageToShow =
-              mostCenteredContainer.querySelector("img:not(.sm\\:hidden)") ||
-              mostCenteredContainer.querySelector("img:last-child");
+            // Remove animation class when out of viewport
+            textContent?.classList.remove('opacity-100', 'translate-y-0');
+            textContent?.classList.add('opacity-0', 'translate-y-8');
           }
-
-          if (imageToShow) {
-            imageToShow.classList.add("opacity-100");
-          }
-        }
+        });
       },
-      { threshold: 0.9 }
+      { 
+        threshold: 0.9, // Trigger when 90% of the element is visible
+      }
     );
 
-    const containers = document.querySelectorAll(".group");
+    const containers = document.querySelectorAll(".scroll-animate-container");
     containers.forEach((container) => observer.observe(container));
 
     return () => {
@@ -88,159 +67,181 @@ export default function Home() {
         </Link>
       </div>
 
-{/* Description Section */}
-<section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
-  <div className="container mx-auto px-4">
-    <div className="max-w-7xl mx-auto">
-      {/* Rounded container with shadow and responsive padding */}
-      <div className="bg-hands-calcium rounded-3xl shadow-custom px-6 py-8 sm:px-[5.625rem] sm:py-12">
-        <div className="text-center">
-          <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-black leading-[1.1]">
-            Like having your own personal chef.
-          </h2>
-          {/* Subtext */}
-          <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
-  <p className="text-black">
-    It answers everyday questions like
-    <br /> {/* Line break will now appear on all screen sizes */}
-    <span className="text-hands-green transition-all duration-500">
-      <AnimatedQuestions />
-    </span>
-  </p>
-</div>
-
+      {/* Description Section */}
+      <section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-[5.625rem] sm:py-12">
+              <div className="text-center">
+                <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
+                  Like having your own personal chef.
+                </h2>
+                <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
+                  <p className="text-black">
+                    It answers everyday questions like
+                    <br />
+                    <span className="text-hands-green transition-all duration-500">
+                      <AnimatedQuestions />
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Full Width Image Sections */}
       <section className="w-full">
         {/* First Container */}
-        <div className="bg-black w-full h-[50vh] relative group">
-          <img
-            src="/Images/bookmark-slice-mobile-export1.jpg"
-            alt="Bookmark feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-          />
-          <img
-            src="/Images/bookmark-slice-export2.png"
-            alt="Bookmark feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20 pb-12">
-            <div className="w-full md:w-2/3 lg:w-full">
-              <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-2 leading-none opacity-0 animate-slide-up">
-                Goodbye bookmarks.
-              </h1>
-              <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-5">
-                Import recipes from anywhere—Instagram, TikTok, YouTube, and your <br />favorite food blogs—in seconds.
-              </p>
+        <div className="w-full px-4 sm:px-[5.625rem] py-10">
+          <div className="relative bg-gray-300 rounded-[36px] overflow-hidden h-[75vh] sm:h-[60vh] lg:h-[75vh] scroll-animate-container">
+
+            {/* Images now always visible */}
+            <img
+              src="/Images/bookmark-slice-mobile-export1.jpg"
+              alt="feature-one"
+              className="absolute inset-0 w-full h-full object-cover sm:hidden"
+            />
+            <img
+              src="/Images/bookmark-slice-export2.png"
+              alt="feature-one"
+              className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+            />
+
+            {/* Optional dark overlay */}
+            <div className="absolute inset-0 bg-black/10" />
+
+            {/* Content with animation classes */}
+            <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20 pb-12">
+              <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-black mb-2 leading-none">
+                  Goodbye bookmarks.
+                </h1>
+                <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-black">
+                  Import recipes from anywhere—Instagram, TikTok, YouTube, and your<br />
+                  favorite food blogs—in seconds.
+                </p>
+              </div>
             </div>
+            
           </div>
         </div>
 
         {/* Second Container */}
-        <div className="bg-black w-full h-[50vh] relative group">
-          <img
-            src="/Images/search-slice-mobile-export1.jpg"
-            alt="Search feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-          />
-          <img
-            src="/Images/search-slice-export1.jpg"
-            alt="Search feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20">
-            <div className="w-full md:w-2/3 lg:w-full">
-              <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-10">
-                Always know what to make.
-              </h1>
-              <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-15">
-                Find your recipes by ingredients or category to make leftovers into your next favorite meal.
-              </p>
+        <div className="w-full px-4 sm:px-[5.625rem] py-10">
+          <div className="relative bg-gray-300 rounded-[36px] overflow-hidden h-[75vh] sm:h-[60vh] lg:h-[75vh] scroll-animate-container">
+
+            {/* Images now always visible */}
+            <img
+              src="/Images/search-slice-mobile-export1.jpg"
+              alt="Search feature"
+              className="absolute inset-0 w-full h-full object-cover sm:hidden"
+            />
+            <img
+              src="/Images/search-slice-export1.jpg"
+              alt="Search feature"
+              className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+            />
+
+            {/* Optional dark overlay */}
+            <div className="absolute inset-0 bg-black/10" />
+
+            {/* Content with animation classes */}
+            <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20 pb-12">
+              <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-black mb-2 leading-none">
+                  Always know what to make.
+                </h1>
+                <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-black">
+                  Find your recipes by ingredients or category to make leftovers into your next favorite meal.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
 
-        {/* Third Container */}
-        <div className="bg-black w-full h-[50vh] relative group">
-          <img
-            src="/Images/your-week-slice-mobile-export1.jpg"
-            alt="Week feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-          />
-          <img
-            src="/Images/yourweek-slice-export1.jpg"
-            alt="Week feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20">
-            <div className="w-full md:w-2/3 lg:w-full">
-              <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-15">
-                No one cooks like Hands.
-              </h1>
-              <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
-                Hands can recommend new recipes, inspire and plan weekly meals based on what you like to eat.
-              </p>
-            </div>
-          </div>
-        </div>
+{/* Third Container */}
+<div className="bg-white w-full h-[75vh] relative group">
+  <img
+    src="/Images/your-week-slice-mobile-export1.jpg"
+    alt="Week feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
+  />
+  <img
+    src="/Images/yourweek-slice-export1.jpg"
+    alt="Week feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
+  />
 
-        {/* Fourth Container - Smart Cart */}
-        <div className="bg-black w-full h-[50vh] relative group">
-          <img
-            src="/Images/features-cart-mobile-export1.jpg"
-            alt="Smart Cart feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-          />
-          <img
-            src="/Images/features-cart-slice-export1.jpg"
-            alt="Smart Cart feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20">
-            <div className="w-full md:w-2/3 lg:w-full">
-              <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
-                Smart cart.
-              </h1>
-              <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-25">
-                Add ingredients instantly to your Shopping List and share with your family and friends to stay organized.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div className="absolute inset-0 bg-black/10" />
 
-        {/* Fifth Container */}
-        <div className="bg-black w-full h-[50vh] relative group">
-          <img
-            src="/Images/features-personal-mobile-export2.jpg"
-            alt="Personal feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-          />
-          <img
-            src="/Images/features-personal-slice-export2.jpg"
-            alt="Personal feature"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-          />
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20">
-            <div className="w-full md:w-2/3 lg:w-full">
-              <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
-                Gets to know you.
-              </h1>
-              <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
-                Hands learns about your preferences, nutritional goals, even allergies — like a personal chef.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
+    <div className="w-full md:w-2/3 lg:w-full">
+      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-15">
+        No one cooks like Hands.
+      </h1>
+      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
+        Hands can recommend new recipes, inspire and plan weekly meals based on what you like to eat.
+      </p>
+    </div>
+  </div>
+</div>
+
+{/* Fourth Container - Smart Cart */}
+<div className="bg-white w-full h-[75vh] relative group">
+  <img
+    src="/Images/features-cart-mobile-export1.jpg"
+    alt="Smart Cart feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
+  />
+  <img
+    src="/Images/features-cart-slice-export1.jpg"
+    alt="Smart Cart feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
+  />
+
+  <div className="absolute inset-0 bg-black/10" />
+
+  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
+    <div className="w-full md:w-2/3 lg:w-full">
+      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
+        Smart cart.
+      </h1>
+      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-25">
+        Add ingredients instantly to your Shopping List and share with your family and friends to stay organized.
+      </p>
+    </div>
+  </div>
+</div>
+
+{/* Fifth Container */}
+<div className="bg-white w-full h-[75vh] relative group">
+  <img
+    src="/Images/features-personal-mobile-export2.jpg"
+    alt="Personal feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
+  />
+  <img
+    src="/Images/features-personal-slice-export2.jpg"
+    alt="Personal feature"
+    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
+  />
+
+  <div className="absolute inset-0 bg-black/20" />
+
+  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
+    <div className="w-full md:w-2/3 lg:w-full">
+      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
+        Gets to know you.
+      </h1>
+      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
+        Hands learns about your preferences, nutritional goals, even allergies — like a personal chef.
+      </p>
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Mission Section */}
@@ -254,7 +255,7 @@ export default function Home() {
           </p>
           <Link
             href="/mission"
-            className="mt-6 text-lg font-semibold font-['Halyard_Display'] text-[#009EFF] hover:text-[#0077CC] transition-colors flex items-center gap-2"
+            className="mt-6 text-lg font-semibold font-['Halyard_Display'] text-[#6ED308] hover:text-[#A5E765] transition-colors flex items-center gap-2"
           >
             See More
             <ArrowUpRight className="w-4 h-4" />
