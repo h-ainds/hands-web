@@ -96,8 +96,8 @@ export default function Home() {
       <section className="w-full">
 
 <Feature
-  mobileSrc="/Images/bookmark-slice-mobile-export1.jpg"
-  desktopSrc="/Images/bookmark-slice-export2.png"
+  mobileSrc="/Images/feature-dinner-placeholder-small.jpg"
+  desktopSrc="/Images/feature-dinner-placeholder-large.jpg"
   alt="Bookmarks feature"
   title="Goodbye bookmarks."
   description={`Import recipes from anywhere—Instagram, TikTok, YouTube, and your

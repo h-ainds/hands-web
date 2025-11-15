@@ -28,19 +28,19 @@ const Feature: React.FC<FeatureProps> = ({
     // OUTER CONTAINER — RESTORES px-6 sm:px-[5.625rem] py-10
     <div className="w-full px-6 sm:px-[5.625rem] py-10">
       {/* INNER RECTANGLE — background, rounded corners, scroll-animate-container */}
-      <div className="relative rounded-[36px] overflow-hidden bg-gray-300 h-[75vh] scroll-animate-container">
+      <div className="relative rounded-[36px] overflow-hidden h-[75vh] scroll-animate-container">
         {/* Mobile Image */}
         <img
           src={mobileSrc}
           alt={alt}
-          className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
+          className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-500 sm:hidden"
         />
 
         {/* Desktop Image */}
         <img
           src={desktopSrc}
           alt={alt}
-          className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
+          className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-500 hidden sm:block"
         />
 
         {/* Overlay */}
