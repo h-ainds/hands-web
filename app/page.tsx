@@ -6,6 +6,7 @@ import { ChevronRight, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedQuestions } from "@/components/AnimatedQuestions";
+import Feature from "@/components/Feature";
 
 
 export default function Home() {
@@ -69,9 +70,9 @@ export default function Home() {
 
       {/* Description Section */}
       <section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-[5.625rem] sm:py-12">
+            <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-[5.625rem] sm:py-16">
               <div className="text-center">
                 <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
                   Like having your own personal chef.
@@ -93,156 +94,56 @@ export default function Home() {
 
       {/* Full Width Image Sections */}
       <section className="w-full">
-        {/* First Container */}
-        <div className="w-full px-4 sm:px-[5.625rem] py-10">
-          <div className="relative bg-gray-300 rounded-[36px] overflow-hidden h-[75vh] sm:h-[60vh] lg:h-[75vh] scroll-animate-container">
 
-            {/* Images now always visible */}
-            <img
-              src="/Images/bookmark-slice-mobile-export1.jpg"
-              alt="feature-one"
-              className="absolute inset-0 w-full h-full object-cover sm:hidden"
-            />
-            <img
-              src="/Images/bookmark-slice-export2.png"
-              alt="feature-one"
-              className="absolute inset-0 w-full h-full object-cover hidden sm:block"
-            />
+<Feature
+  mobileSrc="/Images/bookmark-slice-mobile-export1.jpg"
+  desktopSrc="/Images/bookmark-slice-export2.png"
+  alt="Bookmarks feature"
+  title="Goodbye bookmarks."
+  description={`Import recipes from anywhere—Instagram, TikTok, YouTube, and your
+favorite food blogs—in seconds.`}
+  overlay="bg-black/10"
+  titleDelay="animation-delay-10"
+  descriptionDelay="animation-delay-15"
+/>
 
-            {/* Optional dark overlay */}
-            <div className="absolute inset-0 bg-black/10" />
+<Feature
+  mobileSrc="/Images/search-slice-mobile-export1.jpg"
+  desktopSrc="/Images/search-slice-export1.jpg"
+  alt="Search feature"
+  title="Always know what to make."
+  description="Find your recipes by ingredients or category to make leftovers into your next favorite meal."
+  overlay="bg-black/10"
+  titleDelay="animation-delay-10"
+  descriptionDelay="animation-delay-15"
+/>
 
-            {/* Content with animation classes */}
-            <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20 pb-12">
-              <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-black mb-2 leading-none">
-                  Goodbye bookmarks.
-                </h1>
-                <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-black">
-                  Import recipes from anywhere—Instagram, TikTok, YouTube, and your<br />
-                  favorite food blogs—in seconds.
-                </p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
+<Feature
+  mobileSrc="/Images/your-week-slice-mobile-export1.jpg"
+  desktopSrc="/Images/yourweek-slice-export1.jpg"
+  alt="Week feature"
+  title="No one cooks like Hands."
+  description="Hands can recommend new recipes, inspire and plan weekly meals based on what you like to eat."
+/>
 
-        {/* Second Container */}
-        <div className="w-full px-4 sm:px-[5.625rem] py-10">
-          <div className="relative bg-gray-300 rounded-[36px] overflow-hidden h-[75vh] sm:h-[60vh] lg:h-[75vh] scroll-animate-container">
+<Feature
+  mobileSrc="/Images/features-cart-mobile-export1.jpg"
+  desktopSrc="/Images/features-cart-slice-export1.jpg"
+  alt="Smart Cart feature"
+  title="Smart cart."
+  description="Add ingredients instantly to your Shopping List and share with your family and friends to stay organized."
+/>
 
-            {/* Images now always visible */}
-            <img
-              src="/Images/search-slice-mobile-export1.jpg"
-              alt="Search feature"
-              className="absolute inset-0 w-full h-full object-cover sm:hidden"
-            />
-            <img
-              src="/Images/search-slice-export1.jpg"
-              alt="Search feature"
-              className="absolute inset-0 w-full h-full object-cover hidden sm:block"
-            />
+<Feature
+  mobileSrc="/Images/features-personal-mobile-export2.jpg"
+  desktopSrc="/Images/features-personal-slice-export2.jpg"
+  alt="Personal feature"
+  title="Gets to know you."
+  description="Hands learns about your preferences, nutritional goals, even allergies — like a personal chef."
+  overlay="bg-black/20"
+/>
 
-            {/* Optional dark overlay */}
-            <div className="absolute inset-0 bg-black/10" />
-
-            {/* Content with animation classes */}
-            <div className="absolute inset-0 flex flex-col justify-center p-8 md:px-20 pb-12">
-              <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-black mb-2 leading-none">
-                  Always know what to make.
-                </h1>
-                <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-black">
-                  Find your recipes by ingredients or category to make leftovers into your next favorite meal.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-{/* Third Container */}
-<div className="bg-white w-full h-[75vh] relative group">
-  <img
-    src="/Images/your-week-slice-mobile-export1.jpg"
-    alt="Week feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-  />
-  <img
-    src="/Images/yourweek-slice-export1.jpg"
-    alt="Week feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-  />
-
-  <div className="absolute inset-0 bg-black/10" />
-
-  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
-    <div className="w-full md:w-2/3 lg:w-full">
-      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-15">
-        No one cooks like Hands.
-      </h1>
-      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
-        Hands can recommend new recipes, inspire and plan weekly meals based on what you like to eat.
-      </p>
-    </div>
-  </div>
-</div>
-
-{/* Fourth Container - Smart Cart */}
-<div className="bg-white w-full h-[75vh] relative group">
-  <img
-    src="/Images/features-cart-mobile-export1.jpg"
-    alt="Smart Cart feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-  />
-  <img
-    src="/Images/features-cart-slice-export1.jpg"
-    alt="Smart Cart feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-  />
-
-  <div className="absolute inset-0 bg-black/10" />
-
-  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
-    <div className="w-full md:w-2/3 lg:w-full">
-      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
-        Smart cart.
-      </h1>
-      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-25">
-        Add ingredients instantly to your Shopping List and share with your family and friends to stay organized.
-      </p>
-    </div>
-  </div>
-</div>
-
-{/* Fifth Container */}
-<div className="bg-white w-full h-[75vh] relative group">
-  <img
-    src="/Images/features-personal-mobile-export2.jpg"
-    alt="Personal feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 sm:hidden"
-  />
-  <img
-    src="/Images/features-personal-slice-export2.jpg"
-    alt="Personal feature"
-    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hidden sm:block"
-  />
-
-  <div className="absolute inset-0 bg-black/20" />
-
-  <div className="absolute inset-0 flex flex-col justify-center px-6 py-8 sm:px-[5.625rem] sm:py-12">
-    <div className="w-full md:w-2/3 lg:w-full">
-      <h1 className="text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] text-white mb-4 leading-none opacity-0 animate-slide-up animation-delay-20">
-        Gets to know you.
-      </h1>
-      <p className="text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white mb-0 opacity-0 animate-slide-up animation-delay-20">
-        Hands learns about your preferences, nutritional goals, even allergies — like a personal chef.
-      </p>
-    </div>
-  </div>
-</div>
-      </section>
+</section>
 
       {/* Mission Section */}
       <section className="w-full bg-white text-black h-[75vh] flex items-center justify-center">
