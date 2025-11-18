@@ -54,8 +54,8 @@ export default function Home() {
           <span className="hidden lg:inline">&nbsp;</span>
           co-pilot.
         </h1>
-        <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-semibold max-w-2xl leading-7 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
-          Introducing Hands, your intelligent, personal cooking assistant.
+        <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-semibold max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
+        Ask to turn your leftovers into your next favorite meal.
         </p>
         <Link
           href="/app"
@@ -79,7 +79,7 @@ export default function Home() {
                 </h2>
                 <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
                   <p className="text-black">
-                    It answers everyday questions like
+                    Answers everyday questions like
                     <br />
                     <span className="text-hands-green transition-all duration-500">
                       <AnimatedQuestions />
@@ -99,9 +99,8 @@ export default function Home() {
   mobileSrc="/Images/feature-dinner-placeholder-small.jpg"
   desktopSrc="/Images/feature-dinner-placeholder-large.jpg"
   alt="Bookmarks feature"
-  title="Goodbye bookmarks."
-  description={`Import recipes from anywhere—Instagram, TikTok, YouTube, and your
-favorite food blogs—in seconds.`}
+  title="Turn leftovers into dinner."
+  description={`Ask for recipe suggestions based on what’s in your fridge.`}
   overlay="bg-black/10"
   titleDelay="animation-delay-10"
   descriptionDelay="animation-delay-15"
@@ -111,8 +110,8 @@ favorite food blogs—in seconds.`}
   mobileSrc="/Images/search-slice-mobile-export1.jpg"
   desktopSrc="/Images/search-slice-export1.jpg"
   alt="Search feature"
-  title="Always know what to make."
-  description="Find your recipes by ingredients or category to make leftovers into your next favorite meal."
+  title="Learns from you."
+  description="Hands gets to know your preferences, nutritional goals, even allergies — like a personal chef."
   overlay="bg-black/10"
   titleDelay="animation-delay-10"
   descriptionDelay="animation-delay-15"
@@ -122,25 +121,16 @@ favorite food blogs—in seconds.`}
   mobileSrc="/Images/your-week-slice-mobile-export1.jpg"
   desktopSrc="/Images/yourweek-slice-export1.jpg"
   alt="Week feature"
-  title="No one cooks like Hands."
-  description="Hands can recommend new recipes, inspire and plan weekly meals based on what you like to eat."
+  title="Create shopping lists fast."
+  description="Add ingredients instantly to your Shopping List and stay organized."
 />
 
 <Feature
   mobileSrc="/Images/features-cart-mobile-export1.jpg"
   desktopSrc="/Images/features-cart-slice-export1.jpg"
   alt="Smart Cart feature"
-  title="Smart cart."
-  description="Add ingredients instantly to your Shopping List and share with your family and friends to stay organized."
-/>
-
-<Feature
-  mobileSrc="/Images/features-personal-mobile-export2.jpg"
-  desktopSrc="/Images/features-personal-slice-export2.jpg"
-  alt="Personal feature"
-  title="Gets to know you."
-  description="Hands learns about your preferences, nutritional goals, even allergies — like a personal chef."
-  overlay="bg-black/20"
+  title="Add your favorites."
+  description="Save your recipes from your favorite websites—in seconds."
 />
 
 </section>

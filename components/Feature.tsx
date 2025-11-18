@@ -26,7 +26,7 @@ const Feature: React.FC<FeatureProps> = ({
 }) => {
   return (
     // OUTER CONTAINER — RESTORES px-6 sm:px-[5.625rem] py-10
-    <div className="w-full px-6 sm:px-[5.625rem] py-10">
+    <div className="w-full px-6 sm:px-[5.625rem] py-4 sm:py-8">
       {/* INNER RECTANGLE — background, rounded corners, scroll-animate-container */}
       <div className="relative rounded-[36px] overflow-hidden h-[75vh] scroll-animate-container">
         {/* Mobile Image */}
