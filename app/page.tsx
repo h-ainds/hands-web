@@ -96,14 +96,14 @@ export default function Home() {
       <section className="w-full">
 
 <Feature
-  mobileSrc="/Images/feature-dinner-placeholder-small.jpg"
+  mobileSrc="/Images/feature-dinner-small.jpg"
   desktopSrc="/Images/feature-dinner-placeholder-large.jpg"
   alt="Bookmarks feature"
   title="Turn leftovers into dinner."
   description={`Ask for recipe suggestions based on what’s in your fridge.`}
-  overlay="bg-black/10"
   titleDelay="animation-delay-10"
   descriptionDelay="animation-delay-15"
+  textPosition="bottom"
 />
 
 <Feature
@@ -112,17 +112,18 @@ export default function Home() {
   alt="Search feature"
   title="Learns from you."
   description="Hands gets to know your preferences, nutritional goals, even allergies — like a personal chef."
-  overlay="bg-black/10"
   titleDelay="animation-delay-10"
   descriptionDelay="animation-delay-15"
+  textPosition="top"
 />
 
 <Feature
-  mobileSrc="/Images/your-week-slice-mobile-export1.jpg"
+  mobileSrc="/Images/feature-shop-small.jpg"
   desktopSrc="/Images/yourweek-slice-export1.jpg"
   alt="Week feature"
   title="Create shopping lists fast."
   description="Add ingredients instantly to your Shopping List and stay organized."
+  textPosition="top"
 />
 
 <Feature
@@ -131,6 +132,7 @@ export default function Home() {
   alt="Smart Cart feature"
   title="Add your favorites."
   description="Save your recipes from your favorite websites—in seconds."
+  textPosition="top"
 />
 
 </section>
