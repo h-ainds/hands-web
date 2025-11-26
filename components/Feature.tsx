@@ -69,7 +69,7 @@ const Feature: React.FC<FeatureProps> = ({
         <div
           className={`absolute inset-0 flex flex-col px-6 py-8 sm:px-[5.625rem] sm:py-12 ${positionClasses[textPosition]}`}
         >
-          <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <div className="w-full md:w-2/3 lg:max-w-xl animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
             <h1
               className={`text-[2.5rem] md:text-[5rem] font-bold tracking-tight font-['Halyard_Display'] mb-4 leading-none text-white ${titleDelay}`}
             >

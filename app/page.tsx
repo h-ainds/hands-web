@@ -47,26 +47,42 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="min-h-[calc(83vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center">
-        <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-          Your kitchen
-          <br className="block lg:hidden" />
-          <span className="hidden lg:inline">&nbsp;</span>
-          co-pilot.
-        </h1>
-        <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
-        Get recipe ideas, meal plans, and budget-friendly tips tailored to your ingredients and goals.
-        </p>
-        <Link
-          href="/app"
-          className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
-        >
-          <span className="relative">Start now</span>
-          <span className="relative top-[1.5px] ms-1 flex items-center">
-            <ChevronRight size={16} />
-          </span>
-        </Link>
-      </div>
+      <div className="relative min-h-[calc(83vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center overflow-hidden">
+
+{/* Desktop Background Image */}
+<img
+  src="/Images/new-placeholder-hero.jpg"
+  alt="Hero background"
+  className="hidden lg:block absolute inset-0 w-full h-full object-cover scale-75 opacity-100"
+/>
+
+{/* Overlay (set to 0 for now — adjust if needed) */}
+<div className="hidden lg:block absolute inset-0 bg-black/0"></div>
+
+{/* Foreground Content */}
+<div className="relative z-10 flex flex-col items-center">
+  <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight text-white bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
+    Your kitchen
+    <br className="block lg:hidden" />
+    <span className="hidden lg:inline">&nbsp;</span>
+    co-pilot.
+  </h1>
+
+  <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black lg:text-white">
+    Get recipe ideas, meal plans, and budget-friendly tips tailored to your ingredients and goals.
+  </p>
+
+  <Link
+    href="/app"
+    className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+  >
+    <span className="relative">Start now</span>
+    <span className="relative top-[1.5px] ms-1 flex items-center">
+      <ChevronRight size={16} />
+    </span>
+  </Link>
+</div>
+</div>
 
       {/* Description Section */}
       <section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
@@ -80,7 +96,7 @@ export default function Home() {
                 <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
                   <p className="text-black">
                     Answers everyday questions like
-                    <br />
+                    <br/>
                     <span className="text-hands-green transition-all duration-500">
                       <AnimatedQuestions />
                     </span>
@@ -108,7 +124,7 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/search-slice-mobile-export1.jpg"
-  desktopSrc="/Images/feature2-test-large.png"
+  desktopSrc="/Images/feature-22-test-large.jpeg"
   alt="Search feature"
   title="Learns from you."
   description="Hands gets to know your preferences, nutritional goals, even allergies — like a personal chef."
@@ -119,7 +135,7 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/feature-shop-small.jpg"
-  desktopSrc="/Images/yourweek-slice-export1.jpg"
+  desktopSrc="/Images/feature-shopping-large.jpg"
   alt="Week feature"
   title="Create shopping lists fast."
   description="Add ingredients instantly to your Shopping List and stay organized."
@@ -128,7 +144,7 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/features-cart-mobile-export1.jpg"
-  desktopSrc="/Images/features-cart-slice-export1.jpg"
+  desktopSrc="/Images/feature 4 original asset concept.png"
   alt="Smart Cart feature"
   title="Add your favorites."
   description="Save your recipes from your favorite websites—in seconds."
