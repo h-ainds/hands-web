@@ -54,8 +54,8 @@ export default function Home() {
           <span className="hidden lg:inline">&nbsp;</span>
           co-pilot.
         </h1>
-        <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-semibold max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
-        Ask to turn your leftovers into your next favorite meal.
+        <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black">
+        Get recipe ideas, meal plans, and budget-friendly tips tailored to your ingredients and goals.
         </p>
         <Link
           href="/app"
@@ -97,10 +97,10 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/feature-dinner-small.jpg"
-  desktopSrc="/Images/feature-dinner-placeholder-large.jpg"
+  desktopSrc="/Images/feature-1-experiment-large.png"
   alt="Bookmarks feature"
   title="Turn leftovers into dinner."
-  description={`Ask for recipe suggestions based on what’s in your fridge.`}
+  description={`Ask for recipe ideas based on what’s in your fridge.`}
   titleDelay="animation-delay-10"
   descriptionDelay="animation-delay-15"
   textPosition="bottom"
@@ -108,7 +108,7 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/search-slice-mobile-export1.jpg"
-  desktopSrc="/Images/search-slice-export1.jpg"
+  desktopSrc="/Images/feature2-test-large.png"
   alt="Search feature"
   title="Learns from you."
   description="Hands gets to know your preferences, nutritional goals, even allergies — like a personal chef."

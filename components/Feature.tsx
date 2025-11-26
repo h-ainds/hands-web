@@ -71,7 +71,7 @@ const Feature: React.FC<FeatureProps> = ({
         >
           <div className="w-full md:w-2/3 lg:w-full animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
             <h1
-              className={`text-[2.5rem] md:text-[5rem] font-bold font-['Halyard_Display'] mb-4 leading-none text-white ${titleDelay}`}
+              className={`text-[2.5rem] md:text-[5rem] font-bold tracking-tight font-['Halyard_Display'] mb-4 leading-none text-white ${titleDelay}`}
             >
               {title}
             </h1>

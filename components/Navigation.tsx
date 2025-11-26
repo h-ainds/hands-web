@@ -22,33 +22,33 @@ const Navigation = () => {
           </Link>
         </div>
 
-        {/* Column 2: Nav links (hidden on small screens) */}
-        <div className="col-span-1 justify-center hidden sm:flex space-x-6">
-          <Link
-            href="/"
-            className="text-lg text-black hover:text-gray-600 transition-colors font-halyard font-book"
-          >
-            About
-          </Link>
-          <Link
-            href="/mission"
-            className="text-lg text-black hover:text-gray-600 transition-colors font-halyard font-book"
-          >
-            Mission
-          </Link>
-          <a
-            href="mailto:handsforai@gmail.com"
-            className="text-lg text-black hover:text-gray-600 transition-colors font-halyard font-book"
-          >
-            Careers
-          </a>
-          <Link
-            href="/updates"
-            className="text-lg text-black hover:text-gray-600 transition-colors font-halyard font-book"
-          >
-            Updates
-          </Link>
-        </div>
+{/* Column 2: Nav links (hidden on small screens) */}
+<div className="col-span-1 justify-center hidden sm:flex space-x-0">
+  <Link
+    href="/"
+    className="text-lg text-black font-halyard font-book px-4 py-1 rounded-full transition-all hover:bg-[#f7f7f7]"
+  >
+    About
+  </Link>
+  <Link
+    href="/mission"
+    className="text-lg text-black font-halyard font-book px-4 py-1 rounded-full transition-all hover:bg-[#f7f7f7]"
+  >
+    Mission
+  </Link>
+  <a
+    href="mailto:handsforai@gmail.com"
+    className="text-lg text-black font-halyard font-book px-4 py-1 rounded-full transition-all hover:bg-[#f7f7f7]"
+  >
+    Careers
+  </a>
+  <Link
+    href="/updates"
+    className="text-lg text-black font-halyard font-book px-4 py-1 rounded-full transition-all hover:bg-[#f7f7f7]"
+  >
+    Updates
+  </Link>
+</div>
 
         {/* Column 3: Sign Up + Mobile Menu Toggle */}
         <div className="col-span-1 flex justify-end items-center gap-4">
