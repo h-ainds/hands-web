@@ -67,17 +67,17 @@ const Feature: React.FC<FeatureProps> = ({
 
         {/* TEXT CONTENT */}
         <div
-          className={`absolute inset-0 flex flex-col px-6 py-8 sm:px-[5.625rem] sm:py-12 ${positionClasses[textPosition]}`}
+          className={`absolute inset-0 flex flex-col px-6 py-4 sm:px-[5.625rem] sm:py-12 ${positionClasses[textPosition]}`}
         >
           <div className="w-full md:w-2/3 lg:max-w-xl animate-text-content opacity-0 translate-y-8 transition-all duration-700 ease-out">
             <h1
-              className={`text-[2.5rem] md:text-[5rem] font-bold tracking-tight font-['Halyard_Display'] mb-4 leading-none text-white ${titleDelay}`}
+              className={`text-[2.5rem] md:text-[5rem] font-bold tracking-tight leading-none font-halyard mb-4 text-white ${titleDelay}`}
             >
               {title}
             </h1>
 
             <p
-              className={`text-lg leading-tight md:text-[1.75rem] font-['Halyard_Display'] font-semibold text-white ${descriptionDelay}`}
+              className={`text-lg leading-none md:text-[1.75rem] font-halyard font-semibold text-white ${descriptionDelay}`}
             >
               {description}
             </p>

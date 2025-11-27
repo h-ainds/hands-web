@@ -123,8 +123,8 @@ export default function Home() {
 />
 
 <Feature
-  mobileSrc="/Images/search-slice-mobile-export1.jpg"
-  desktopSrc="/Images/feature-22-test-large.jpeg"
+  mobileSrc="/Images/feature-memory-small.jpg"
+  desktopSrc="/Images/feature-memory-large.jpg"
   alt="Search feature"
   title="Learns from you."
   description="Hands gets to know your preferences, nutritional goals, even allergies — like a personal chef."
