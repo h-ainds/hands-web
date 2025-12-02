@@ -46,18 +46,25 @@ export default function Home() {
     <main className="bg-white text-white flex flex-col">
       <Navigation />
 
-      {/* Hero Section */}
-      <div className="relative min-h-[calc(83vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center overflow-hidden">
+{/* Hero Section */}
+<div className="relative min-h-[calc(93vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center overflow-hidden">
 
-{/* Desktop Background Image */}
+{/* Mobile Background Image */}
 <img
-  src="/Images/new-placeholder-hero.jpg"
-  alt="Hero background"
-  className="hidden lg:block absolute inset-0 w-full h-full object-cover scale-75 opacity-100"
+  src="/Images/hero-bg-t3-small.jpg"
+  alt="Mobile hero background"
+  className="block lg:hidden absolute inset-0 w-full h-full scale-110 object-cover opacity-100"
 />
 
-{/* Overlay (set to 0 for now — adjust if needed) */}
-<div className="hidden lg:block absolute inset-0 bg-black/0"></div>
+{/* Desktop Background Video */}
+<video
+  src="/Videos/bg-hero-test1.MP4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="hidden lg:block absolute inset-0 w-full h-full object-fill scale-100 opacity-100"
+/>
 
 {/* Foreground Content */}
 <div className="relative z-10 flex flex-col items-center">
@@ -68,13 +75,13 @@ export default function Home() {
     co-pilot.
   </h1>
 
-  <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-black lg:text-white">
+  <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-white">
     Get recipe ideas, meal plans, and budget-friendly tips tailored to your ingredients and goals.
   </p>
 
   <Link
     href="/app"
-    className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+    className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-white text-black text-xl sm:text-lg font-halyard font-normal rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
   >
     <span className="relative">Start now</span>
     <span className="relative top-[1.5px] ms-1 flex items-center">
@@ -113,7 +120,7 @@ export default function Home() {
 
 <Feature
   mobileSrc="/Images/feature-dinner-small.jpg"
-  desktopSrc="/Images/feature-1-experiment-large.png"
+  desktopSrc="/Images/feature-1-large.png"
   alt="Bookmarks feature"
   title="Turn leftovers into dinner."
   description={`Ask for recipe ideas based on what’s in your fridge.`}
@@ -143,8 +150,8 @@ export default function Home() {
 />
 
 <Feature
-  mobileSrc="/Images/features-cart-mobile-export1.jpg"
-  desktopSrc="/Images/feature 4 original asset concept.png"
+  mobileSrc="/Images/feature-save-small.jpg"
+  desktopSrc="/Images/feature-save-large.jpg"
   alt="Smart Cart feature"
   title="Add your favorites."
   description="Save your recipes from your favorite websites—in seconds."

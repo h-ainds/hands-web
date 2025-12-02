@@ -16,7 +16,7 @@ const Navigation = () => {
         <div className="col-span-1">
           <Link
             href="/"
-            className="text-xl sm:text-lg text-black hover:text-gray-600 transition-colors font-halyard font-medium"
+            className="text-xl sm:text-lg text-black hover:text-gray-600 transition-colors font-halyard font-normal"
           >
             Hands
           </Link>
@@ -54,7 +54,7 @@ const Navigation = () => {
         <div className="col-span-1 flex justify-end items-center gap-4">
           <Link
             href="/try-hands-sign-up"
-            className="bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-medium px-4 pt-1 pb-1.5 sm:py-1 rounded-full"
+            className="bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-normal px-4 pt-1 pb-1.5 sm:py-1 rounded-full"
           >
             Sign up
           </Link>
