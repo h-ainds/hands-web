@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedQuestions } from "@/components/AnimatedQuestions";
 import Feature from "@/components/Feature";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 
 export default function Home() {
@@ -91,29 +92,27 @@ export default function Home() {
 </div>
 </div>
 
-      {/* Description Section */}
-      <section className="w-full pt-0 sm:pt-0 pb-6 sm:pb-8">
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-[5.625rem] sm:py-16">
-              <div className="text-center">
-                <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
-                  Like having your own personal chef.
-                </h2>
-                <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
-                  <p className="text-black">
-                    Answers everyday questions like
-                    <br/>
-                    <span className="text-hands-green transition-all duration-500">
-                      <AnimatedQuestions />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+{/* Description Section */}
+<section className="w-full pt-0 sm:pt-0 pb-2 sm:pb-0">
+  <div className="px-6 sm:px-[5.625rem] py-4 sm:py-8 sm:pt-0">
+    <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-12 sm:py-16">
+      <div className="text-center">
+        <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
+          Like having your own personal chef.
+        </h2>
+        <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
+          <p className="text-black">
+            Answers everyday questions like
+            <br/>
+            <span className="text-hands-green transition-all duration-500">
+              <AnimatedQuestions />
+            </span>
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Full Width Image Sections */}
       <section className="w-full">
@@ -160,49 +159,104 @@ export default function Home() {
 
 </section>
 
-      {/* Mission Section */}
-      <section className="w-full bg-white text-black h-[75vh] flex items-center justify-center">
-        <div className="container mx-auto flex flex-col items-center justify-center px-4 text-center">
-          <h2 className="text-[3rem] sm:text-[6.125rem] font-bold tracking-tighter leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-            Our mission
-          </h2>
-          <p className="text-lg leading-tight sm:text-[1.5rem] font-semibold max-w-2xl font-['Halyard_Display'] mt-4 sm:mt-2 text-gray-800">
-            Our mission is to understand human taste and build software that is useful for anyone that cooks.
-          </p>
-          <Link
-            href="/mission"
-            className="mt-6 text-lg font-semibold font-['Halyard_Display'] text-[#6ED308] hover:text-[#A5E765] transition-colors flex items-center gap-2"
-          >
-            See More
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      {/* Reviews Section */}
+      <section className="w-full bg-white text-black py-24">
+      <div className="container mx-auto px-6 flex flex-col items-center">
+      <h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
+      Hands down, reviews</h2>
 
-      {/* Career Section */}
-      <section className="w-full">
-        <div className="w-full relative" style={{ height: "100vh" }}>
-          <img
-            src="/Images/careers-teamoffice.jpg"
-            alt="Team office"
-            className="absolute inset-0 w-full h-full object-cover z-[5]"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-[10]">
-            <h1 className="text-4xl md:text-6xl font-bold font-['Halyard_Display'] text-white mb-6">
-              Create the future of health.
-            </h1>
-            <p className="text-lg leading-tight md:text-xl font-['Halyard_Display'] font-semibold text-white max-w-2xl mb-10">
-              If you love AI-powered software, cooking and want to build a company at ground zero, join us.
-            </p>
-            <a
-              href="mailto:luiswoldu@gmail.com"
-              className="px-8 py-2 border-2 border-white rounded-full font-helvetica text-base md:text-lg font-medium bg-white text-black transition-all duration-300 transform hover:scale-110"
-            >
-              Apply
-            </a>
-          </div>
-        </div>
-      </section>
+    {/*container */}
+    <div
+      className="
+        bg-hands-calcium
+        rounded-[36px]
+        w-full
+        max-w-2xl
+        aspect-[4/3]          /* the real ratio */
+        overflow-hidden
+        sm:max-h-[33vh]       /* desktop cap */
+        relative
+        flex items-center justify-center"
+    >
+      {/* Carousel images/content */}
+      <div className="w-full h-full">
+        <ReviewsCarousel />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{/* Pricing Section 
+<section className="w-full bg-white text-black py-2">
+<div className="container mx-auto px-6 flex flex-col items-center">
+<h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
+Pricing</h2>
+
+</div>
+</section> */}
+
+{/* CTA Section */}
+<section className="w-full pt-0 pb-12">
+  <div className="container mx-auto px-6 sm:px-[5.625rem]">
+    <div
+      className="
+        bg-hands-calcium 
+        rounded-[36px] 
+        shadow-custom
+        px-6 sm:px-[5.625rem] 
+        py-10 
+        lg:py-0 
+        lg:h-[12.875rem]       /* 206px desktop */
+        flex 
+        flex-col 
+        items-center 
+        justify-between 
+        gap-8 
+        text-center 
+        lg:flex-row 
+        lg:text-start
+      "
+    >
+      {/* TEXT */}
+      <div className="max-w-[600px]">
+        <h2 className="text-[1.75rem] sm:text-[2.5rem] font-halyard font-normal text-hands-iron leading-tight">
+          Join hundreds of millions of users and try Hands today.
+        </h2>
+      </div>
+
+      {/* BUTTON */}
+      <div className="flex flex-row flex-wrap items-center justify-center gap-3">
+        <Link
+          href="/app"
+          className="
+            px-6 
+            pt-1 
+            pb-1.5 
+            bg-white 
+            text-black 
+            text-lg 
+            font-halyard 
+            font-normal 
+            rounded-full 
+            transition-all 
+            duration-300 
+            transform 
+            hover:scale-110 
+            flex 
+            items-center 
+            justify-center
+          "
+        >
+          <span className="relative">Start now</span>
+          <span className="relative top-[1.5px] ms-1 flex items-center">
+            <ChevronRight size={16} />
+          </span>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </main>
