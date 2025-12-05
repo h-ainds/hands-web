@@ -37,7 +37,7 @@ const Navigation = () => {
     Mission
   </Link>
   <a
-    href="mailto:handsforai@gmail.com"
+                  href="/careers"
     className="text-lg text-black font-halyard font-book px-4 py-1 rounded-full transition-all hover:bg-[#f7f7f7]"
   >
     Careers
