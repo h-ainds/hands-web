@@ -49,52 +49,48 @@ export default function Home() {
 
 {/* Hero Section */}
 <div className="relative min-h-[calc(93vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center overflow-hidden">
-
-{/* Mobile Background Image */}
-<img
-  src="/Images/hero-bg-t3-small.jpg"
-  alt="Mobile hero background"
-  className="block lg:hidden absolute inset-0 w-full h-full scale-110 object-cover opacity-100"
-/>
-
-{/* Desktop Background Video */}
-<video
-  src="/Videos/bg-hero-test1.MP4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="hidden lg:block absolute inset-0 w-full h-full object-fill scale-100 opacity-100"
-/>
-
-{/* Foreground Content */}
-<div className="relative z-10 flex flex-col items-center">
-  <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight text-white bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-    Your kitchen
-    <br className="block lg:hidden" />
-    <span className="hidden lg:inline">&nbsp;</span>
-    co-pilot.
-  </h1>
-
-  <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-2xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 text-white">
-    Get recipe ideas, meal plans, and budget-friendly tips tailored to your ingredients and goals.
-  </p>
-
-  <Link
-    href="/app"
-    className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 bg-white text-black text-xl sm:text-lg font-halyard font-normal rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
-  >
-    <span className="relative">Start now</span>
-    <span className="relative top-[1.5px] ms-1 flex items-center">
-      <ChevronRight size={16} />
-    </span>
-  </Link>
-</div>
+  {/* Mobile Background Image */}
+  <img
+    src="/Images/hero-bg-t3-small.jpg"
+    alt="Mobile hero background"
+    className="block lg:hidden absolute inset-0 w-full h-full scale-110 object-cover opacity-100"
+  />
+  {/* Foreground Content */}
+  <div className="relative z-10 flex flex-col items-center">
+    <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight 
+      lg:bg-[url('/Images/bg-hero-large.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat lg:bg-fixed lg:bg-clip-text lg:text-transparent
+      text-white leading-none sm:leading-tight font-halyard opacity-0 animate-slide-up">
+      Your kitchen
+      <br className="block lg:hidden" />
+      <span className="hidden lg:inline">&nbsp;</span>
+      co-pilot.
+    </h1>
+    {/* WRAPPED SUBTITLE FOR PERFECT MOBILE ALIGNMENT */}
+    <div className="w-full px-6 sm:px-[5.625rem]">
+      <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-3xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 
+        text-white lg:text-hands-grey
+        mx-auto text-center">
+        Get real recipes and meal ideas tailored to your ingredients and goals.
+      </p>
+    </div>
+    <Link
+      href="/app"
+      className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 
+        bg-white text-black lg:bg-hands-green lg:text-white
+        text-xl sm:text-lg font-halyard font-normal rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
+    >
+      <span className="relative">Start now</span>
+      <span className="relative top-[1.5px] ms-1 flex items-center">
+        <ChevronRight size={16} />
+      </span>
+    </Link>
+  </div>
 </div>
 
 {/* Description Section */}
 <section className="w-full pt-0 sm:pt-0 pb-2 sm:pb-0">
-  <div className="px-6 sm:px-[5.625rem] py-4 sm:py-8 sm:pt-0">
+  {/* MATCHING WRAPPER FOR PERFECT ALIGNMENT */}
+  <div className="w-full px-6 sm:px-[5.625rem] py-4 sm:py-8 sm:pt-0">
     <div className="bg-hands-calcium rounded-[36px] shadow-custom px-6 py-10 sm:px-12 sm:py-16">
       <div className="text-center">
         <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
@@ -160,7 +156,7 @@ export default function Home() {
 </section>
 
       {/* Reviews Section */}
-      <section className="w-full bg-white text-black py-24">
+      <section className="w-full bg-white text-black py-12">
       <div className="container mx-auto px-6 flex flex-col items-center">
       <h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
       Hands down, reviews</h2>
@@ -242,9 +238,7 @@ Pricing</h2>
             transition-all 
             duration-300 
             transform 
-            hover:scale-110 
-            flex 
-            items-center 
+            flex items-center 
             justify-center
           "
         >

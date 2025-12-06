@@ -45,23 +45,16 @@ function ReviewsCarousel() {
       <button
         onClick={prev}
         className="
-          hidden sm:flex
-          absolute left-4 top-1/2 -translate-y-1/2 z-10 
-          bg-white/70 backdrop-blur-md border border-black/10 
-          rounded-full p-2 shadow-lg hover:bg-white transition
-        "
-      >
+ hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 
+          bg-white shadow-md rounded-full p-2">
         <ChevronLeft className="w-5 h-5 text-black" />
       </button>
-
       <button
         onClick={next}
         className="
           hidden sm:flex
           absolute right-4 top-1/2 -translate-y-1/2 z-10 
-          bg-white/70 backdrop-blur-md border border-black/10 
-          rounded-full p-2 shadow-lg hover:bg-white transition
-        "
+          bg-white rounded-full shadow-md p-2"
       >
         <ChevronRight className="w-5 h-5 text-black" />
       </button>
