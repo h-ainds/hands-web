@@ -13,21 +13,16 @@ export default function CareersPage() {
         <h1
           className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up"
         >
-          Create the future
-          <br className="block lg:hidden" />
-          <span className="hidden lg:inline">&nbsp;</span>
-          of health.
+          Create the future          of health.
         </h1>
-
-        <p className="text-[1.75rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 opacity-0 animate-slide-up animation-delay-5 text-black whitespace-pre-line">
-          Hands started with a simple question: can we solve the everyday “what’s for dinner?” problem? This led us to build the first truly intelligent personal AI chef. Today, Hands helps you get meal ideas by suggesting real recipes, tailored to you. We believe that Hands will be the ultimate cooking assistant, helping millions plan meals and shop for groceries.
-
-          {"\n\n"}
-          We’re a tiny, bootstrapped team pushing the future of personalized health, and are always looking for curious minds from a wide range of disciplines and backgrounds.
-
-          {"\n\n"}
-          If this sounds exciting, we’d love to hear from you.
-        </p>
+        
+        <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 opacity-0 animate-slide-up animation-delay-5 text-black whitespace-pre-line">
+          Answering 'whats for dinner' for millions. To do so, we're building Hands, the world's first personalized AI chef. Helping you cook, meal plan and grocery shop based on your taste, diet and goals.
+{"\n\n"}
+          We're a tiny team pushing the future of personalized health, and we're looking for curious minds from a wide range of disciplines and backgrounds.
+{"\n\n"}
+          If this sounds exciting, we'd love to hear from you.
+</p>
       </section>
 
       {/* Mission Section */}

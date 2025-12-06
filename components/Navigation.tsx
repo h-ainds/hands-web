@@ -116,7 +116,7 @@ const Navigation = () => {
                 transition={{ delay: 0.2, duration: 0.3 }}
               >
                 <a
-                  href="mailto:handsforai@gmail.com"
+                  href="/careers"
                   onClick={handleLinkClick}
                   className="text-2xl text-black hover:text-gray-600 font-halyard font-book block"
                 >
