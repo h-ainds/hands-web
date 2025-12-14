@@ -13,7 +13,7 @@ export default function Mission() {
 
   return (
     <main className="bg-white text-black flex flex-col">
-      <Navigation onWaitlistOpen={() => setShowWaitlist(true)} />
+      <Navigation/>
 
       {/* Mission Section */}
       <div className="min-h-[72vh] flex flex-col items-center justify-center px-4 text-center">
@@ -98,7 +98,7 @@ export default function Mission() {
               If you love AI-powered software, cooking and want to build a company at ground zero, join us.
             </p>
             <a
-              href="mailto:luiswoldu@gmail.com"
+              href="mailto:handsforai@gmail.com"
               className="px-8 py-2 border-2 border-white rounded-full font-helvetica text-base md:text-lg font-medium bg-white text-black transition-all duration-300 transform hover:scale-110"
             >
               Apply

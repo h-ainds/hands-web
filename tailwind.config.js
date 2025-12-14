@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-gradient": "url('/Images/bg-gradient-hero.jpg')",
+        "hero-large": "url('/Images/bg-hero-large.jpg')",
       },
       backgroundSize: {
         "hero-size": "100% 100%",

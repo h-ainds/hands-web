@@ -9,40 +9,38 @@ export default function CareersPage() {
       <Navigation />
 
       {/* Careers Hero Section */}
-      <section className="min-h-[calc(95vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center">
-        <h1
-          className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-gradient bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up"
+      <section className="min-h-[calc(95vh-4rem)] flex flex-col items-start sm:items-center pt-16 pb-32 sm:pt-32 px-4 text-left sm:text-center">
+      <h1
+          className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-large bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-halyard opacity-0 animate-slide-up"
         >
-          Create the future          of health.
+          Create the future of health.
         </h1>
-        
+
         <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 opacity-0 animate-slide-up animation-delay-5 text-black whitespace-pre-line">
           Answering 'whats for dinner' for millions. To do so, we're building Hands, the world's first personalized AI chef. Helping you cook, meal plan and grocery shop based on your taste, diet and goals.
-{"\n\n"}
+          {"\n\n"}
           We're a tiny team pushing the future of personalized health, and we're looking for curious minds from a wide range of disciplines and backgrounds.
-{"\n\n"}
+          {"\n\n"}
           If this sounds exciting, we'd love to hear from you.
-</p>
+        </p>
+
+        {/* CTA Button */}
+        <Link
+              href="mailto:handsforai@gmail.com"
+              className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 self-start sm:self-center
+            bg-hands-green text-white
+            text-xl sm:text-lg font-halyard font-normal rounded-full
+            transition-all duration-300 transform hover:scale-110
+            opacity-0 animate-slide-up animation-delay-10
+            flex items-center justify-center"
+        >
+          <span className="relative">Apply</span>
+          <span className="relative ms-1 flex items-center">
+            <ArrowUpRight size={16} />
+          </span>
+        </Link>
       </section>
 
-      {/* Mission Section */}
-      <section className="w-full bg-white text-black h-[75vh] flex items-center justify-center">
-        <div className="container mx-auto flex flex-col items-center justify-center px-4 text-center">
-          <h2 className="text-[3rem] sm:text-[6.125rem] font-bold tracking-tighter leading-none sm:leading-tight font-['Halyard_Display'] opacity-0 animate-slide-up">
-            Our mission
-          </h2>
-          <p className="text-lg leading-tight sm:text-[1.5rem] font-semibold max-w-2xl font-['Halyard_Display'] mt-4 sm:mt-2 text-gray-800">
-            Understanding human taste and build software that is useful for anyone that cooks.
-          </p>
-          <Link
-            href="/mission"
-            className="mt-6 text-lg font-semibold font-['Halyard_Display'] text-[#6ED308] hover:text-[#A5E765] transition-colors flex items-center gap-2"
-          >
-            See More
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
 
       {/* Career CTA */}
       <section className="w-full">
@@ -57,11 +55,11 @@ export default function CareersPage() {
               Create the future of health.
             </h1>
             <p className="text-lg leading-tight md:text-xl font-halyard font-semibold text-white max-w-2xl mb-10">
-              If you love AI-powered software, cooking and want to build a company at ground zero, join us.
+            Please send us your resume and a short note on a project you’re proud of.
             </p>
             <a
-              href="mailto:luiswoldu@gmail.com"
-              className="px-8 py-2 border-2 border-white rounded-full font-helvetica text-base md:text-lg font-medium bg-white text-black transition-all duration-300 transform hover:scale-110"
+              href="mailto:handsforai@gmail.com"
+              className="px-8 py-1.5 border-2 border-white rounded-full font-helvetica text-base md:text-lg font-medium bg-white text-black transition-all duration-300 transform hover:scale-110"
             >
               Apply
             </a>
