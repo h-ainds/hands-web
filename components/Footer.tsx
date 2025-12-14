@@ -63,7 +63,7 @@ export default function Footer() {
                 <Link href="/mission" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
                   Mission
                 </Link>
-                <a href="mailto:handsforai@gmail.com" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <a href="/careers" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
                   Careers
                 </a>
                 <Link href="mailto:handsforai@gmail.com" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">

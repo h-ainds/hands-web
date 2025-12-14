@@ -32,8 +32,7 @@ export default function CareersPage() {
             text-xl sm:text-lg font-halyard font-normal rounded-full
             transition-all duration-300 transform hover:scale-110
             opacity-0 animate-slide-up animation-delay-10
-            flex items-center justify-center"
-        >
+            flex items-center justify-center">
           <span className="relative">Apply</span>
           <span className="relative ms-1 flex items-center">
             <ArrowUpRight size={16} />
@@ -51,8 +50,8 @@ export default function CareersPage() {
             className="absolute inset-0 w-full h-full object-cover z-[5]"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-[10]">
-            <h1 className="text-4xl md:text-6xl font-bold font-halyard text-white mb-6">
-              Create the future of health.
+            <h1 className="text-4xl md:text-6xl font-bold font-halyard text-white mb-4">
+            Join us.
             </h1>
             <p className="text-lg leading-tight md:text-xl font-halyard font-semibold text-white max-w-2xl mb-10">
             Please send us your resume and a short note on a project you’re proud of.
