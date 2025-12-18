@@ -18,11 +18,11 @@ export default function Mission() {
       <h1
           className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-large bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight font-halyard"
         >
-          Describe our mission in 4-5.
+          Making cooking personal.
         </h1>
 
         <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 text-hands-grey whitespace-pre-line">
-          Answering 'whats for dinner' for millions. To do so, we're building Hands...
+        We believe in a future where cooking is effortless and deeply personal. A companion that notices what’s in your fridge, anticipates what your body needs, and guides you towards a healthy life. 
         </p>
         </section>
 
@@ -59,17 +59,17 @@ export default function Mission() {
 </section>
 
       {/* Our Goal Section */}
-      <section className="w-full">
+      <section className="w-full text-left sm:text-center">
         <div className="container mx-auto px-4 pb-32">
           <div className="max-w-3xl mx-auto">
           <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal 
                 max-w-4xl leading-8 mt-6 text-black whitespace-pre-line">
-          While personalization is everywhere—from grocery flyers to social media—most systems lack true context. At Hands, we focus on the most advanced and latest machine learning technologies to solve the challenge of prediction accuracy and context-awareness.
+          A personal AI chef.
           </p>
           <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal 
                 max-w-4xl leading-8 mt-6 text-black whitespace-pre-line">
-          Designed to be worn all day, giving you high-quality audio and convenient access to your companion who can observe the world alongside you.
-          </p>
+An intelligent cooking assistant that intuitively learns from your preferences and goals to suggest relevant recipes that fit into your life. To do so, we’re pushing the limits of machine learning to better predict what you’re going to like. Making health more personal and accessible for everyone is a meaningful application of AI.
+</p>
           </div>
         </div>
       </section>

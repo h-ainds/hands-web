@@ -17,7 +17,7 @@ export default function CareersPage() {
         </h1>
 
         <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 opacity-0 animate-slide-up animation-delay-5 text-black whitespace-pre-line">
-          Answering 'whats for dinner' for millions. To do so, we're building Hands, the world's first personalized AI chef. Helping you cook, meal plan and grocery shop based on your taste, diet and goals.
+          Answering 'whats for dinner' for millions. To do so, we're building Hands, the world's first personalized AI chef. Helping you cook, meal plan and grocery shop based on your preferences and goals.
           {"\n\n"}
           We're a tiny team pushing the future of personalized health, and we're looking for curious minds from a wide range of disciplines and backgrounds.
           {"\n\n"}
