@@ -26,12 +26,11 @@ export default function Mission() {
         </p>
         </section>
 
-{/* Personal Chef Section */}
+{/* Card Section */}
 <section className="w-full">
   {/* MATCHING WRAPPER FOR PERFECT ALIGNMENT */}
   <div className="w-full px-6 sm:px-[5.625rem] py-4 sm:py-8 sm:pt-0">
     <div className="relative overflow-hidden rounded-[36px] shadow-custom">
-      
       {/* Background images */}
       <Image
         src="/Images/mission-section-export@3x.jpg"
@@ -47,7 +46,10 @@ export default function Mission() {
         className="object-cover block md:hidden"
         priority
       />
-
+      
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/5 z-[1]" />
+      
       {/* Card Title */}
       <div className="relative z-10 px-6 py-10 sm:px-12 sm:py-16">
         <h1 className="text-[2.5rem] md:text-[5rem] tracking-tighter font-bold font-halyard text-center text-white mb-4 leading-none">
