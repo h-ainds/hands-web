@@ -168,52 +168,36 @@ export default function Home() {
         rounded-[36px]
         w-full
         max-w-2xl
-        aspect-[4/3]          /* the real ratio */
         overflow-hidden
         sm:max-h-[33vh]       /* desktop cap */
+        min-h-[10rem]        /* mobile h cap */
         relative
         flex items-center justify-center"
     >
-      {/* Carousel images/content */}
-      <div className="w-full h-full">
+      {/* Reviews */}
         <ReviewsCarousel />
-      </div>
     </div>
-
   </div>
 </section>
 
-{/* Pricing Section 
-<section className="w-full bg-white text-black py-2">
-<div className="container mx-auto px-6 flex flex-col items-center">
-<h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
-Pricing</h2>
-
-</div>
-</section> */}
 
 {/* CTA Section */}
 <section className="w-full pt-0 pb-12">
   <div className="container mx-auto px-6 sm:px-[5.625rem]">
     <div
       className="
-        bg-hands-calcium 
-        rounded-[36px] 
-        shadow-custom
-        px-6 sm:px-[5.625rem] 
-        py-10 
+        bg-hands-calcium rounded-[36px] 
+        px-6 sm:px-[5.625rem] py-10 
         lg:py-0 
         lg:h-[12.875rem]       /* 206px desktop */
-        flex 
-        flex-col 
+        flex flex-col 
         items-center 
         justify-between 
         gap-8 
         text-center 
         lg:flex-row 
-        lg:text-start
-      "
-    >
+        lg:text-start" 
+      >
       {/* TEXT */}
       <div className="max-w-[600px]">
         <h2 className="text-[1.75rem] sm:text-[2.5rem] font-halyard font-normal text-hands-iron leading-tight">

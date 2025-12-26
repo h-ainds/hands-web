@@ -1,23 +1,23 @@
 "use client"
-
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const reviews = [
-  { id: 1, img: "Images/rev1.png" },
-  { id: 2, img: "/reviews/rev2.jpg" },
-  { id: 3, img: "/reviews/rev3.jpg" },
-  { id: 4, img: "/reviews/rev4.jpg" },
-  { id: 5, img: "/reviews/rev5.jpg" },
-  { id: 6, img: "/reviews/rev6.jpg" },
-  { id: 7, img: "/reviews/rev7.jpg" },
-  { id: 8, img: "/reviews/rev8.jpg" },
-  { id: 9, img: "/reviews/rev9.jpg" },
-  { id: 10, img: "/reviews/rev10.jpg" },
+  {
+    id: 1,
+    text: "\“This completely changed how I plan meals.\”",
+  },
+  {
+    id: 2,
+    text: "\“So simple it actually sticks.\”",
+  },
+  {
+    id: 3,
+    text: "\“Finally, something that doesn't feel overwhelming.\”",
+  },
 ]
 
-function ReviewsCarousel() {
+export default function ReviewsCarousel() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(1)
 
@@ -31,71 +31,42 @@ function ReviewsCarousel() {
     setIndex((prev) => (prev - 1 + reviews.length) % reviews.length)
   }
 
-  const handleDragEnd = (_e: any, info: { offset: { x: number } }) => {
-    const offsetX = info.offset.x
-
-    if (offsetX < -60) next()
-    else if (offsetX > 60) prev()
+  const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
+    if (info.offset.x < -60) next()
+    if (info.offset.x > 60) prev()
   }
 
   return (
-    <div className="w-full h-full relative overflow-hidden rounded-[36px]">
-
-      {/* --- DESKTOP ARROWS --- */}
-      <button
-        onClick={prev}
-        className="
- hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 
-          bg-white shadow-md rounded-full p-2">
-        <ChevronLeft className="w-5 h-5 text-black" />
-      </button>
-      <button
-        onClick={next}
-        className="
-          hidden sm:flex
-          absolute right-4 top-1/2 -translate-y-1/2 z-10 
-          bg-white rounded-full shadow-md p-2"
-      >
-        <ChevronRight className="w-5 h-5 text-black" />
-      </button>
-
-      {/* --- MAIN IMAGE / DRAG --- */}
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          key={reviews[index].id}
-          src={reviews[index].img}
-          alt="Review"
-          className="w-full h-full object-contain"
-          custom={direction}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.15}
-          onDragEnd={handleDragEnd}
-          initial={{ opacity: 0, x: direction * 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -direction * 50 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-        />
-      </AnimatePresence>
-
-      {/* --- INDICATORS --- */}
-      <div className="absolute bottom-4 w-full flex justify-center gap-2">
-        {reviews.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              setDirection(i > index ? 1 : -1)
-              setIndex(i)
-            }}
-            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-              i === index ? "bg-black/50 scale-125" : "bg-black/20"
-            }`}
-          />
-        ))}
+    <div className="relative rounded-[36px] flex flex-col items-center justify-center overflow-hidden">
+      {/* TEXT ONLY */}
+      <div className="flex-1 flex items-center justify-center px-6 text-center">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.p
+            key={reviews[index].id}
+            custom={direction}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.15}
+            onDragEnd={handleDragEnd}
+            initial={{ opacity: 0, x: direction * 32 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -direction * 32 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="text-lg font-halyard font-normal text-hands-iron leading-tight max-w-md cursor-grab active:cursor-grabbing"
+          >
+            {reviews[index].text}
+          </motion.p>
+        </AnimatePresence>
       </div>
 
+      {/* Static AVATAR */}
+      <div className="mb-2 mt-6">
+        <img
+          src="Images/belinda-avatar.jpg"
+          alt="User Avatar"
+          className="w-9 h-9 rounded-full object-cover"
+        />
+      </div>
     </div>
   )
 }
-
-export default ReviewsCarousel
