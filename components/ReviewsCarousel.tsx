@@ -44,7 +44,7 @@ export default function ReviewsCarousel() {
 <button
   aria-label="Previous review"
   onClick={prev}
-  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-50
+  className="absolute left-4 sm:left-4 top-1/2 -translate-y-1/2 z-50
              h-9 w-9 rounded-full bg-white/80
              flex items-center justify-center"
 >
@@ -55,7 +55,7 @@ export default function ReviewsCarousel() {
 <button
   aria-label="Next review"
   onClick={next}
-  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-50
+  className="absolute right-4 top-1/2 -translate-y-1/2 z-50
              h-9 w-9 rounded-full bg-white/80
              flex items-center justify-center">
   <ChevronRight className="h-4 w-4" />
