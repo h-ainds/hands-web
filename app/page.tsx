@@ -96,8 +96,8 @@ export default function Home() {
         <h2 className="text-[2.25rem] sm:text-[3.75rem] font-halyard font-semibold text-hands-iron leading-[1.1]">
           Like having your own personal chef.
         </h2>
-        <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium text-black/30 leading-6">
-          <p className="text-black">
+        <div className="mt-6 text-lg sm:text-2xl font-halyard font-medium leading-6">
+          <p className="text-hands-iron">
             Answers everyday questions like
             <br/>
             <span className="text-hands-green transition-all duration-500">
@@ -156,7 +156,7 @@ export default function Home() {
 </section>
 
       {/* Reviews Section */}
-      <section className="w-full bg-white text-black py-12">
+      <section className="w-full bg-white text-black pt-12 pb-14">
       <div className="container mx-auto px-6 flex flex-col items-center">
       <h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
       Hands down, reviews</h2>
@@ -169,7 +169,7 @@ export default function Home() {
         w-full
         max-w-2xl
         overflow-hidden
-        sm:max-h-[33vh]       /* desktop cap */
+        sm:max-h-[33vh]       /* desktop cap */ 
         min-h-[10rem]        /* mobile h cap */
         relative
         flex items-center justify-center"
@@ -201,7 +201,7 @@ export default function Home() {
       {/* TEXT */}
       <div className="max-w-[600px]">
         <h2 className="text-[1.75rem] sm:text-[2.5rem] font-halyard font-normal text-hands-iron leading-tight">
-          Join hundreds of millions of users and try Hands today.
+          Join hundreds of happy users and try Hands today.
         </h2>
       </div>
 
