@@ -3,7 +3,7 @@ import * as React from "react"
 import Link from "next/link"
 import Navigation from "@/components/Navigation"
 import Footer from "@/components/Footer"
-import { updates } from "./[slug]/data"
+import { updates } from "./data"
 
 interface ContentBlock {
   type: "paragraph" | "heading"
