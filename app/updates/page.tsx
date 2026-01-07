@@ -22,8 +22,8 @@ export default function UpdatesPage() {
     <main className="bg-white text-black min-h-screen">
       <Navigation />
       <div className="max-w-7xl mx-auto px-5 py-14">
-        <h1 className="text-6xl font-bold text-center mb-12 font-['Halyard_Display']">
-          Updates
+        <h1 className="text-[3.5rem] sm:text-[6rem] font-bold text-left sm:text-center mb-8 font-halyard ">
+          Latest News
         </h1>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {updates.map((update: Update) => {
@@ -36,12 +36,12 @@ export default function UpdatesPage() {
               <Link
                 key={update.slug}
                 href={`/updates/${update.slug}`}
-                className="block p-6 border border-black/10 rounded-lg hover:border-black/30 transition-colors"
+                className="block p-6 border border-black/10 rounded-lg shadow-lg hover:border-black/30 transition-colors"
               >
-                <time className="text-sm text-black/60 font-['Halyard_Display']">
+                <time className="text-sm text-black/60 font-halyard">
                   {formattedDate}
                 </time>
-                <h2 className="text-2xl font-semibold mt-2 font-['Halyard_Display']">
+                <h2 className="text-2xl font-semibold mt-2 font-halyard">
                   {update.title}
                 </h2>
               </Link>

@@ -10,7 +10,7 @@ const Navigation = () => {
   const handleLinkClick = () => setMenuOpen(false)
 
   return (
-    <nav className="sticky top-0 z-20 w-full h-16 bg-white flex items-center">
+    <nav className="sticky top-0 z-50 w-full h-16 bg-white flex items-center">
       <div className="container mx-auto px-6 h-full grid grid-cols-2 sm:grid-cols-3 items-center">
        {/* Column 1: Logo */}
         <div className="col-span-1">
