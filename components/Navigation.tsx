@@ -53,7 +53,7 @@ const Navigation = () => {
         {/* Column 3: Sign Up + Mobile Menu Toggle */}
         <div className="col-span-1 flex justify-end items-center gap-4">
           <Link
-            href="/try-hands-sign-up"
+            href="https://testflight.apple.com/join/Xe2XnUjd"
             className="bg-[#6CD402] text-white text-xl sm:text-lg font-halyard font-normal px-4 pt-1 pb-1.5 sm:py-1 rounded-full"
           >
             Sign up

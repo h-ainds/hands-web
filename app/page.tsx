@@ -74,7 +74,7 @@ export default function Home() {
       </p>
     </div>
     <Link
-      href="/app"
+      href="https://testflight.apple.com/join/Xe2XnUjd"
       className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 
         bg-white text-black lg:bg-hands-green lg:text-white
         text-xl sm:text-lg font-halyard font-normal rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
@@ -208,7 +208,7 @@ export default function Home() {
       {/* BUTTON */}
       <div className="flex flex-row flex-wrap items-center justify-center gap-3">
         <Link
-          href="/app"
+          href="https://testflight.apple.com/join/Xe2XnUjd"
           className="
             px-6 
             pt-1 
