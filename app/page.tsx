@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedQuestions } from "@/components/AnimatedQuestions";
 import Feature from "@/components/Feature";
-import ReviewsCarousel from "@/components/ReviewsCarousel";
+// import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 
 export default function Home() {
@@ -155,13 +155,13 @@ export default function Home() {
 
 </section>
 
-      {/* Reviews Section */}
+      {/* Reviews Section (Disabled) */}
+      {/*
       <section className="w-full bg-white text-black pt-12 pb-14">
       <div className="container mx-auto px-6 flex flex-col items-center">
       <h2 className="text-[2rem] sm:text-[3.5rem] font-halyard font-semibold text-hands-iron text-center mb-6">
       Hands down, reviews</h2>
 
-    {/*container */}
     <div
       className="
         bg-hands-calcium
@@ -169,20 +169,20 @@ export default function Home() {
         w-full
         max-w-2xl
         overflow-hidden
-        sm:max-h-[33vh]       /* desktop cap */ 
-        min-h-[10rem]        /* mobile h cap */
+        sm:max-h-[33vh]
+        min-h-[10rem]
         relative
         flex items-center justify-center"
     >
-      {/* Reviews */}
         <ReviewsCarousel />
     </div>
   </div>
 </section>
+      */}
 
 
 {/* CTA Section */}
-<section className="w-full pt-0 pb-12">
+<section className="w-full pt-8 sm:pt-24 pb-12">
   <div className="container mx-auto px-6 sm:px-[5.625rem]">
     <div
       className="

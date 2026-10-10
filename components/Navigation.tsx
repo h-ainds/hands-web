@@ -16,7 +16,7 @@ const Navigation = () => {
         <div className="col-span-1">
           <Link
             href="/"
-            className="text-xl sm:text-lg text-black hover:text-gray-600 transition-colors font-halyard font-normal"
+            className="text-xl sm:text-lg text-black hover:text-hands-iron transition-colors font-halyard font-normal"
           >
             Hands
           </Link>
@@ -90,7 +90,7 @@ const Navigation = () => {
                 <Link
                   href="/"
                   onClick={handleLinkClick}
-                  className="text-2xl text-black hover:text-gray-600 font-halyard font-book block"
+                  className="text-2xl text-black hover:text-hands-iron font-halyard font-book block"
                 >
                   About
                 </Link>
@@ -104,7 +104,7 @@ const Navigation = () => {
                 <Link
                   href="/mission"
                   onClick={handleLinkClick}
-                  className="text-2xl text-black hover:text-gray-600 font-halyard font-book block"
+                  className="text-2xl text-black hover:text-hands-iron font-halyard font-book block"
                 >
                   Mission
                 </Link>
@@ -118,7 +118,7 @@ const Navigation = () => {
                 <a
                   href="/careers"
                   onClick={handleLinkClick}
-                  className="text-2xl text-black hover:text-gray-600 font-halyard font-book block"
+                  className="text-2xl text-black hover:text-hands-iron font-halyard font-book block"
                 >
                   Careers
                 </a>
@@ -132,7 +132,7 @@ const Navigation = () => {
                 <Link
                   href="/updates"
                   onClick={handleLinkClick}
-                  className="text-2xl text-black hover:text-gray-600 font-halyard font-book block"
+                  className="text-2xl text-black hover:text-hands-iron font-halyard font-book block"
                 >
                   Updates
                 </Link>

@@ -60,19 +60,19 @@ export default function Footer() {
             {/* Navigation Links */}
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex space-x-4">
-                <Link href="/mission" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <Link href="/mission" className="text-hands-iron hover:text-black font-['Halyard_Display'] font-[350]">
                   Mission
                 </Link>
-                <a href="/careers" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <a href="/careers" className="text-hands-iron hover:text-black font-['Halyard_Display'] font-[350]">
                   Careers
                 </a>
-                <Link href="mailto:handsforai@gmail.com" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <Link href="mailto:handsforai@gmail.com" className="text-hands-iron hover:text-black font-['Halyard_Display'] font-[350]">
                   Contact
                 </Link>
-                <Link href="/terms-of-use" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <Link href="/terms-of-use" className="text-hands-iron hover:text-black font-['Halyard_Display'] font-[350]">
                   Terms of Use
                 </Link>
-                <Link href="/privacy" className="text-gray-600 hover:text-black font-['Halyard_Display'] font-[350]">
+                <Link href="/privacy" className="text-hands-iron hover:text-black font-['Halyard_Display'] font-[350]">
                   Privacy
                 </Link>
               </div>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
           
           {/* Copyright */}
-          <div className="text-gray-600 font-['Halyard_Display'] font-[350]">
+          <div className="text-hands-iron font-['Halyard_Display'] font-[350]">
             Copyright © 2025 Hands. All rights reserved.
           </div>
         </div>
