@@ -22,7 +22,7 @@ export default function UpdatesPage() {
     <main className="bg-white text-black min-h-screen">
       <Navigation />
       <div className="max-w-7xl mx-auto px-5 py-14">
-        <h1 className="text-[3.5rem] sm:text-[6rem] font-bold text-left sm:text-center mb-8 font-halyard ">
+        <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight bg-hero-large bg-hero-size bg-hero-position bg-no-repeat bg-clip-text text-transparent leading-none sm:leading-tight text-left sm:text-center mb-8 font-halyard">
           Latest News
         </h1>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

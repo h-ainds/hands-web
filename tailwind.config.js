@@ -43,6 +43,7 @@ module.exports = {
       fontWeight: {
         book: "300",
         normal: "400",
+        regular: "400",
         medium: "500",
         semibold: "600",
         bold: "700",
@@ -61,8 +62,13 @@ module.exports = {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#F7F7F7",
+          default: "#F7F7F7",
           foreground: "hsl(var(--secondary-foreground))",
+          200: "#DEDEDE",
+          300: "#A1A1A1",
+          400: "#636363",
+          500: "#313131",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -105,13 +111,23 @@ module.exports = {
           lime: "#98E14D",  // 70% variant of green
           honeydew: "#F0FBE5", // 10% variant of green
 
-          // Greys
-          calcium: "#F7F7F7",   // Input field / Secondary button
-          silver: "#DFE0E1",    // Usage
-          magnesium: "#B2B2B2", // Icons
-          grey: "#9F9F9F",      // Secondary text / Placeholder
-          iron: "#58575C",      // Unselected nav text
-          graphite: "#343434",  // Dark text
+          // Greys (Secondary)
+          secondary: {
+            DEFAULT: "#F7F7F7",
+            default: "#F7F7F7",
+            200: "#DEDEDE",
+            300: "#A1A1A1",
+            400: "#636363",
+            500: "#313131",
+          },
+
+          // Refreshed brand greys (compatibility aliases)
+          calcium: "#F7F7F7",   // secondary-default: Input field / Secondary button
+          silver: "#DEDEDE",    // secondary-200: Usage
+          magnesium: "#A1A1A1", // secondary-300: Icons
+          grey: "#A1A1A1",      // secondary-300: Secondary text / Placeholder
+          iron: "#636363",      // secondary-400: Unselected nav text
+          graphite: "#313131",  // secondary-500: Dark text
         },
       },
 

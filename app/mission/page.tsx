@@ -21,7 +21,7 @@ export default function Mission() {
           Making cooking personal.
         </h1>
 
-        <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-normal max-w-4xl leading-8 mt-6 text-hands-grey whitespace-pre-line">
+        <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-regular max-w-4xl leading-8 mt-6 text-secondary-300 whitespace-pre-line">
         We believe in a future where cooking is effortless and deeply personal. A companion that notices what’s in your fridge, anticipates what your body needs, and guides you towards a healthy life. 
         </p>
         </section>

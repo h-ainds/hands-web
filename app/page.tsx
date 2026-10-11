@@ -44,22 +44,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white text-white flex flex-col">
+    <main className="bg-white text-black flex flex-col">
       <Navigation />
 
 {/* Hero Section */}
 <div className="relative min-h-[calc(93vh-4rem)] flex flex-col items-center pt-20 sm:pt-32 px-4 text-center overflow-hidden">
-  {/* Mobile Background Image */}
-  <img
-    src="/Images/hero-bg-t3-small.jpg"
-    alt="Mobile hero background"
-    className="block lg:hidden absolute inset-0 w-full h-full scale-110 object-cover opacity-100"
-  />
   {/* Foreground Content */}
   <div className="relative z-10 flex flex-col items-center">
     <h1 className="text-[3.5rem] sm:text-[6rem] font-bold tracking-tight 
-      lg:bg-[url('/Images/bg-hero-large.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat lg:bg-fixed lg:bg-clip-text lg:text-transparent
-      text-white leading-none sm:leading-tight font-halyard opacity-0 animate-slide-up">
+      bg-[url('/Images/bg-hero-large.jpg')] bg-cover bg-center bg-no-repeat lg:bg-fixed bg-clip-text text-transparent
+      leading-none sm:leading-tight font-halyard opacity-0 animate-slide-up">
       Your kitchen
       <br className="block lg:hidden" />
       <span className="hidden lg:inline">&nbsp;</span>
@@ -67,8 +61,8 @@ export default function Home() {
     </h1>
     {/* WRAPPED SUBTITLE FOR PERFECT MOBILE ALIGNMENT */}
     <div className="w-full px-6 sm:px-[5.625rem]">
-      <p className="text-[1.25rem] sm:text-[1.5rem] font-halyard font-medium max-w-3xl leading-6 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 
-        text-white lg:text-hands-grey
+      <p className="text-[1.5rem] sm:text-[1.75rem] font-halyard font-regular max-w-3xl leading-8 mt-4 sm:mt-2 opacity-0 animate-slide-up animation-delay-5 
+        text-secondary-300
         mx-auto text-center">
         Get real recipes and meal ideas tailored to your ingredients and goals.
       </p>
@@ -76,7 +70,7 @@ export default function Home() {
     <Link
       href="https://testflight.apple.com/join/Xe2XnUjd"
       className="mt-8 px-6 pt-1 pb-1.5 sm:py-1 
-        bg-white text-black lg:bg-hands-green lg:text-white
+        bg-hands-green text-white
         text-xl sm:text-lg font-halyard font-normal rounded-full transition-all duration-300 transform hover:scale-110 opacity-0 animate-slide-up animation-delay-10 flex items-center justify-center"
     >
       <span className="relative">Start now</span>
