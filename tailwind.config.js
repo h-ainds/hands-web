@@ -58,8 +58,14 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
 
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#6CD401",
+          default: "#6CD401",
           foreground: "hsl(var(--primary-foreground))",
+          white: "#FFFFFF",
+          100: "#CBEFA3",
+          200: "#99E14E",
+          400: "#61BF01",
+          500: "#56AA01",
         },
         secondary: {
           DEFAULT: "#F7F7F7",
@@ -110,6 +116,17 @@ module.exports = {
           green: "#6CD401", // Primary (Log In, Save..)
           lime: "#98E14D",  // 70% variant of green
           honeydew: "#F0FBE5", // 10% variant of green
+
+          // Greens (Primary)
+          primary: {
+            DEFAULT: "#6CD401",
+            default: "#6CD401",
+            white: "#FFFFFF",
+            100: "#CBEFA3",
+            200: "#99E14E",
+            400: "#61BF01",
+            500: "#56AA01",
+          },
 
           // Greys (Secondary)
           secondary: {
