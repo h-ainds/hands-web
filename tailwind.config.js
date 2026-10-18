@@ -48,6 +48,20 @@ module.exports = {
         semibold: "600",
         bold: "700",
       },
+      fontSize: {
+        xs: "13px",
+        sm: "15px",
+        base: "18px",
+        lg: "22px",
+        xl: "26px",
+        "2xl": "31px",
+        "3xl": "37px",
+        "4xl": "45px",
+        "5xl": "54px",
+        "6xl": "64px",
+        "7xl": "77px",
+        "8xl": "93px",
+      },
 
       // 🟩 Integrated Hands Palette
       colors: {
