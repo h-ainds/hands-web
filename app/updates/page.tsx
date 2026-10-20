@@ -31,6 +31,7 @@ export default function UpdatesPage() {
               year: "numeric",
               month: "long",
               day: "numeric",
+              timeZone: "UTC",
             })
             return (
               <Link

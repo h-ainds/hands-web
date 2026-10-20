@@ -84,4 +84,45 @@ export type Article = {
         },
       ],
     },
+    {
+      slug: "update",
+      title: "Update",
+      date: "2026-01-25",
+      excerpt:
+        "We're excited to share that we'll be releasing Hands on iOS.",
+      content: [
+        {
+          type: "paragraph",
+          text: "We're excited to share that we'll be releasing Hands on iOS.",
+        },
+        {
+          type: "paragraph",
+          text: "In the last few months, we've spent a lot of time building, tinkering, and experimenting on our app. And after countless tests, we have felt confident enough that it's worth sharing it with the world.",
+        },
+        {
+          type: "heading",
+          text: "What’s Next",
+        },
+        {
+          type: "paragraph",
+          text: "The most requested feature by far is image upload. We'll be working super hard to make that part of the app before the end of March. Until then, recipe suggestions will be provided based on text input.",
+        },
+        {
+          type: "paragraph",
+          text: "Speaking of multimodality, API costs will eventually accumulate and we'll introduce paid tiers. But if there's anything I can guarantee, it's that Hands will always have a free plan that's useful and sufficient for general use.",
+        },
+        {
+          type: "heading",
+          text: "TestFlight",
+        },
+        {
+          type: "paragraph",
+          text: "I expect that we'll stay in TestFlight for at least one to two months, and with the goal of actually getting a lot of feedback from our seed cohort of 100 or so people.",
+        },
+        {
+          type: "paragraph",
+          text: "If you don't hear anything from us for a bit, it's because we're talking to our community d building something that's loved and that has the potential to impact millions.",
+        },
+      ],
+    },
   ]  

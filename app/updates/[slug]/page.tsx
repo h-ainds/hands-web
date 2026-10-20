@@ -10,7 +10,9 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
   const { slug } = React.use(params)
   const router = useRouter()
 
-  const article = updates?.find((a) => a.slug === slug)
+  const article = updates?.find(
+    (a) => a.slug === slug || (a.slug === "update" && (slug === "hands-on-ios" || slug === "ios-release"))
+  )
 
   if (!article) notFound()
 
@@ -18,6 +20,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   })
 
   return (
@@ -36,24 +39,24 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
           </button>
 
           <time
-            className="block text-center text-lg text-black/60 mb-6 font-['Halyard_Display']"
+            className="block text-center text-sm font-regular text-secondary-300 mb-6 font-halyard"
             dateTime={article.date}
           >
             {formattedDate}
           </time>
 
-          <h1 className="text-6xl font-bold text-left mb-12 font-['Halyard_Display']">
+          <h1 className="text-7xl font-semibold text-center text-secondary-500 mb-12 font-halyard">
             {article.title}
           </h1>
 
           <div className="space-y-8">
             {article.content.map((block, i) =>
               block.type === "heading" ? (
-                <h2 key={i} className="text-4xl font-semibold mt-12 mb-6 font-['Halyard_Display']">
+                <h2 key={i} className="text-2xl font-semibold text-secondary-500 mt-12 mb-6 font-halyard">
                   {block.text}
                 </h2>
               ) : (
-                <p key={i} className="text-xl leading-normal text-black/80 font-['Halyard_Display']">
+                <p key={i} className="text-lg leading-normal font-regular text-secondary-500 font-halyard">
                   {block.text}
                 </p>
               )
